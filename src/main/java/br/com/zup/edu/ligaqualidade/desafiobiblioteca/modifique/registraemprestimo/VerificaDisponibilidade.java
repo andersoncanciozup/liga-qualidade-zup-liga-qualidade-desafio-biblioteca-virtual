@@ -1,19 +1,17 @@
-package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.service;
-
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.EmprestimoConcedidoRepository;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.ExemplarRepository;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosExemplar;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.TipoExemplar;
+package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ExemplarDisponivelService {
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.ExemplarRepository;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.TipoExemplar;
 
-    ExemplarRepository exemplarRepository;
+public class VerificaDisponibilidade {
+
+	ExemplarRepository exemplarRepository;
     EmprestimoConcedidoRepository emprestimoConcedidoRepository;
 
-    public ExemplarDisponivelService(ExemplarRepository exemplarRepository,
+    public VerificaDisponibilidade(ExemplarRepository exemplarRepository,
             EmprestimoConcedidoRepository emprestimoConcedidoRepository){
         this.exemplarRepository = exemplarRepository;
         this.emprestimoConcedidoRepository = emprestimoConcedidoRepository;
@@ -27,4 +25,5 @@ public class ExemplarDisponivelService {
 
         return todosExemplaresDisponiveis.stream().findFirst().get();
     }
+
 }

@@ -1,4 +1,4 @@
-package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository;
+package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo;
 
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.EmprestimoConcedido;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosExemplar;

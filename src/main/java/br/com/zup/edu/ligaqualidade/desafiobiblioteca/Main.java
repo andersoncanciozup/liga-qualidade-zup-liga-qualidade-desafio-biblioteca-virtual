@@ -49,7 +49,7 @@ public class Main {
 		 *  Cenario 6
 		 *  
 		 *  - Usuario padrao pede 1 exemplar livre para 10 dias
-		 *  - Dez dias se passaram
+		 *  - Onze dias se passaram
 		 *  - Usuario padrao pede 1 exemplar livre diferente para 10 dias
 		 *  - Retorno: 1 empréstimo concedido para o determinado usuario, determinado exemplar, data prevista de devolução e sem data instante de devolução 
 		 *  

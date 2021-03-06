@@ -3,11 +3,11 @@ package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.DadosDevolucao;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.DadosEmprestimo;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.EmprestimoConcedido;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.EmprestimoConcedidoRepository;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.devolveemprestimo.DevolverEmprestimoService;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.EmprestimoConcedidoRepository;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.RegistrarEmprestimoService;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.ExemplarRepository;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.UsuarioRepository;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.service.DevolverEmprestimoService;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.service.RegistrarEmprestimoService;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosExemplar;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosLivro;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosUsuario;
@@ -45,7 +45,7 @@ public class Solucao {
         UsuarioRepository usuarioRepository = new UsuarioRepository(usuarios);
         ExemplarRepository exemplarRepository = new ExemplarRepository(exemplares);
         EmprestimoConcedidoRepository emprestimoConcedidoRepository = new EmprestimoConcedidoRepository();
-
+        
         RegistrarEmprestimoService registrarEmprestimoService = new RegistrarEmprestimoService(usuarioRepository, exemplarRepository, emprestimoConcedidoRepository);
         if (!emprestimos.isEmpty()) {
             registrarEmprestimoService.registrar(emprestimos);

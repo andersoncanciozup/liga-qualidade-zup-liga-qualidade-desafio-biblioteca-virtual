@@ -1,7 +1,7 @@
-package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.service;
+package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.devolveemprestimo;
 
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.DadosDevolucao;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.EmprestimoConcedidoRepository;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.EmprestimoConcedidoRepository;
 
 import java.util.Set;
 
