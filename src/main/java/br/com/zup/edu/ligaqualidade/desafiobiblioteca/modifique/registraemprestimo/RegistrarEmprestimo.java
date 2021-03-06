@@ -11,13 +11,13 @@ import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosUsuario;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.TipoExemplar;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.TipoUsuario;
 
-public class RegistrarEmprestimoService {
+public class RegistrarEmprestimo {
 
     UsuarioRepository usuarioRepository;
     EmprestimoConcedidoRepository emprestimoConcedidoRepository;
     VerificaDisponibilidade exemplarDisponivelService;
 
-    public RegistrarEmprestimoService(UsuarioRepository usuarioRepository,
+    public RegistrarEmprestimo(UsuarioRepository usuarioRepository,
                                       ExemplarRepository exemplarRepository,
                                       EmprestimoConcedidoRepository emprestimoConcedidoRepository) {
         this.usuarioRepository = usuarioRepository;

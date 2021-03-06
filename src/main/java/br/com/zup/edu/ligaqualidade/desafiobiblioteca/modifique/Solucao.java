@@ -3,9 +3,9 @@ package br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.DadosDevolucao;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.DadosEmprestimo;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.EmprestimoConcedido;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.devolveemprestimo.DevolverEmprestimoService;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.devolveemprestimo.DevolverEmprestimo;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.EmprestimoConcedidoRepository;
-import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.RegistrarEmprestimoService;
+import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraemprestimo.RegistrarEmprestimo;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.ExemplarRepository;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.repository.UsuarioRepository;
 import br.com.zup.edu.ligaqualidade.desafiobiblioteca.pronto.DadosExemplar;
@@ -46,12 +46,12 @@ public class Solucao {
         ExemplarRepository exemplarRepository = new ExemplarRepository(exemplares);
         EmprestimoConcedidoRepository emprestimoConcedidoRepository = new EmprestimoConcedidoRepository();
         
-        RegistrarEmprestimoService registrarEmprestimoService = new RegistrarEmprestimoService(usuarioRepository, exemplarRepository, emprestimoConcedidoRepository);
+        RegistrarEmprestimo registrarEmprestimoService = new RegistrarEmprestimo(usuarioRepository, exemplarRepository, emprestimoConcedidoRepository);
         if (!emprestimos.isEmpty()) {
             registrarEmprestimoService.registrar(emprestimos);
         }
 
-        DevolverEmprestimoService devolverEmprestimoService = new DevolverEmprestimoService(emprestimoConcedidoRepository);
+        DevolverEmprestimo devolverEmprestimoService = new DevolverEmprestimo(emprestimoConcedidoRepository);
         if (!devolucoes.isEmpty()) {
             devolverEmprestimoService.devolver(devolucoes);
         }

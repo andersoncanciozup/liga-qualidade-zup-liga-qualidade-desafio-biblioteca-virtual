@@ -5,11 +5,11 @@ import br.com.zup.edu.ligaqualidade.desafiobiblioteca.modifique.registraempresti
 
 import java.util.Set;
 
-public class DevolverEmprestimoService {
+public class DevolverEmprestimo {
 
     EmprestimoConcedidoRepository emprestimoConcedidoRepository;
 
-    public DevolverEmprestimoService(EmprestimoConcedidoRepository emprestimoConcedidoRepository) {
+    public DevolverEmprestimo(EmprestimoConcedidoRepository emprestimoConcedidoRepository) {
         this.emprestimoConcedidoRepository = emprestimoConcedidoRepository;
     }
 
